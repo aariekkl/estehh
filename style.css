@@ -1,0 +1,255 @@
+/* style.css */
+:root {
+  --background: #ffffff;
+  --text: #222;
+  --accent: #ff7b54;
+  --accent-light: #ffb685;
+  --card-bg: #fff9f4;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --gradient: linear-gradient(135deg, #ff7b54, #ffb685);
+}
+
+body.dark {
+  --background: #1e1e1e;
+  --text: #eee;
+  --accent: #f48fb1;
+  --accent-light: #f8bbd0;
+  --card-bg: #2b2b2b;
+  --shadow: rgba(255, 255, 255, 0.05);
+  --gradient: linear-gradient(135deg, #8e24aa, #ce93d8);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--gradient);
+  color: white;
+  padding: 3rem 1rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+section, footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+h2, h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px var(--shadow);
+  max-width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+  background: #fdf1ea;
+  padding: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.testimoni .testi-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.testi-bubble {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px var(--shadow);
+  max-width: 400px;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+button {
+  background-image: var(--gradient);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 34px;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 16px;
+}
+
+.slider .icon {
+  pointer-events: none;
+  z-index: 2;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+}
+
+footer {
+  background: var(--card-bg);
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 8px var(--shadow);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.animate {
+  animation: fadeInUp 0.7s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .switch {
+    transform: scale(0.9);
+  }
+}

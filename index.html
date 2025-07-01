@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Es Teh Dinda</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggle-theme" />
+      <span class="slider">
+        <span class="icon">🌙</span>
+        <span class="icon">☀️</span>
+      </span>
+    </label>
+  </div>
+
+  <header class="animate">
+    <h1>Es Teh Dinda</h1>
+    <p>Segarnya Es Teh dengan Beragam Varian Rasa</p>
+  </header>
+
+  <section class="varian animate">
+    <h2>Varian Es Teh</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="teh-leci.jpg" alt="Es Teh Leci" />
+        <h3>Teh Leci</h3>
+        <p>Segarnya leci dalam balutan teh manis.</p>
+      </div>
+      <div class="card">
+        <img src="teh-lemon.jpg" alt="Es Teh Lemon" />
+        <h3>Teh Lemon</h3>
+        <p>Perpaduan teh dan asam lemon yang menyegarkan.</p>
+      </div>
+      <div class="card">
+        <img src="teh-mango.jpg" alt="Es Teh Mango" />
+        <h3>Teh Mangga</h3>
+        <p>Manisnya mangga tropis dalam teh dingin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimoni animate">
+    <h2>Testimoni</h2>
+    <div class="testi-list">
+      <div class="testi-bubble">
+        <p><strong>Andini</strong>: Rasa teh lecinya enak banget! Manisnya pas!</p>
+      </div>
+      <div class="testi-bubble">
+        <p><strong>Raka</strong>: Baru coba teh lemon, segarnya nendang!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-pesan animate">
+    <h2>Pesan Sekarang</h2>
+    <form id="order-form">
+      <input type="text" id="nama" placeholder="Nama Anda" required />
+      <select id="varian" required>
+        <option value="">Pilih Varian</option>
+        <option value="Teh Leci">Teh Leci</option>
+        <option value="Teh Lemon">Teh Lemon</option>
+        <option value="Teh Mangga">Teh Mangga</option>
+      </select>
+      <textarea id="catatan" placeholder="Catatan Tambahan (opsional)"></textarea>
+      <button type="submit">Kirim Pesanan via WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Alamat: Jl. Handayani RT.01 Kelurahan Margorejo, Lubuklinggau Utara 1</p>
+    <p>&copy; 2025 Es Teh Dinda</p>
+  </footer>
+
+  <a href="https://wa.me/6283138334108" class="wa-float" target="_blank" aria-label="Chat via WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+      <path d="M20.52 3.48a11.76 11.76 0 00-16.63 0 11.76 11.76 0 000 16.64L2 22l1.88-.49a11.76 11.76 0 0016.64-16.63zM12 20.4a8.36 8.36 0 01-4.54-1.33l-.33-.2-2.7.7.72-2.63-.22-.34a8.36 8.36 0 0112.83-10.4A8.37 8.37 0 0112 20.4zm4.61-6.26c-.25-.12-1.48-.73-1.71-.81s-.4-.12-.57.13-.66.8-.81.96-.3.19-.55.06a6.88 6.88 0 01-2-1.23 7.46 7.46 0 01-1.38-1.71c-.14-.25 0-.38.1-.5.1-.1.25-.26.37-.38s.16-.25.25-.41a.47.47 0 00-.02-.5c-.06-.12-.56-1.35-.77-1.85s-.41-.43-.57-.44h-.48a.93.93 0 00-.67.31 2.8 2.8 0 00-.88 2.08 4.84 4.84 0 001 2.52 11.1 11.1 0 004.4 4.3c1.55.67 2.3.73 3.12.62a2.66 2.66 0 001.75-1.19 2.12 2.12 0 00.15-1.19c-.06-.13-.23-.2-.48-.31z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
